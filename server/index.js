@@ -12,13 +12,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
+app.use(express.json());
+app.use(cookieParser());
+
 app.use(cors({
   origin: "https://vault-vortex.vercel.app",  
   credentials: true
 }));
-
-app.use(express.json());
-app.use(cookieParser());
 
 
     mongoose.connect(process.env.MONGO_URI)
