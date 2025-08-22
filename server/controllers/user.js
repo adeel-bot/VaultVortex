@@ -52,10 +52,11 @@ export async function handleUserSignin(req, res) {
 
     const token = setUser(isUser);
     res.cookie("uid", token, {
-      httpOnly: true,
-      secure: true, // true on if using HTTPS
-      sameSite: "none", // "none" if frontend is on different domain, if you want cross-origin cookie
-    });
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production", // only secure in prod
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+});
+
 
     res.status(200).json({
       id: isUser._id,
