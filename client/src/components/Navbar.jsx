@@ -11,7 +11,7 @@ import { github_icon } from "../index.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URI = "http://localhost:3000/user";
+const API_URI = process.env.REACT_APP_API_URL_USER ||  'http://localhost:3000/user';
 
 const Navbar = ({ theme, saveTheme, showSocialCard, setshowSocialCard }) => {
   const navigate = useNavigate();

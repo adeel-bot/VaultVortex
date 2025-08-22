@@ -1,10 +1,11 @@
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import AuthCard from "./AuthCard";
 import { Link,useNavigate } from "react-router-dom";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 
-    const API_URI = 'http://localhost:3000/user';
+    const API_URI = process.env.REACT_APP_API_URL_USER ||  'http://localhost:3000/user';
+
 export default function SignupPage({ theme }) {
 
     const navigate = useNavigate();
