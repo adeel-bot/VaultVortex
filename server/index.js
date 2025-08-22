@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 
 
 app.use(cors({
-  origin: "https://vault-vortex.vercel.app/",  
+  origin: "https://vault-vortex.vercel.app",  
   credentials: true
 }));
 
