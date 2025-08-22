@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-
+import axios from "axios";
 
 function App() {
  
@@ -12,7 +12,8 @@ function App() {
     return stored ? JSON.parse(stored) ?? true : true;
   });
 
-  
+  axios.defaults.withCredentials = true;
+
     
   return (
     <div className={theme ? "isDark" : ""}>
