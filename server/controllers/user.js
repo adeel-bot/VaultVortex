@@ -1,6 +1,6 @@
 import { User } from "../models/user.js";
 import bcrypt from "bcrypt";
-import { getUser, setUser } from "../service/auth.js";
+import { setUser } from "../service/auth.js";
 
 export async function handleUserLogout(req, res) {
   try {
@@ -50,19 +50,11 @@ export async function handleUserSignin(req, res) {
       return res.status(401).json({ error: "Incorrect password" });
     }
 
-    // const SessionId = uuidv4();
-
-    // setUser(SessionId, isUser);
-    // res.cookie("uid", SessionId, {
-    //   httpOnly: true,
-    //   secure: false, // true on if using HTTPS
-    //   sameSite: "lax", // "none" if frontend is on different domain, if you want cross-origin cookie
-    // });
     const token = setUser(isUser);
     res.cookie("uid", token, {
       httpOnly: true,
-      secure: false, // true on if using HTTPS
-      sameSite: "lax", // "none" if frontend is on different domain, if you want cross-origin cookie
+      secure: true, // true on if using HTTPS
+      sameSite: "none", // "none" if frontend is on different domain, if you want cross-origin cookie
     });
 
     res.status(200).json({

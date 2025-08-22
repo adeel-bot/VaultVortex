@@ -4,7 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-    const API_URI = process.env.REACT_APP_API_URL_USER ||  'http://localhost:3000/user';
+    const API_URI = 'https://vaultvortex-production.up.railway.app/user';
 
 export default function SignupPage({ theme }) {
 

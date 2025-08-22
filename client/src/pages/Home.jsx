@@ -29,7 +29,7 @@ import { Slide } from "react-toastify/unstyled";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URI = process.env.REACT_APP_API_URL || "http://localhost:3000/api/vortex";
+const API_URI = 'https://vaultvortex-production.up.railway.app/api/vortex';
 
 const Card = memo(
   ({
