@@ -1,7 +1,7 @@
 import { useState, useEffect, memo } from "react";
 import "../index.css";
 import { useForm } from "react-hook-form";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import IconSwap from "../services/IconSwap";
 import generateStrongPassword from "../utils/PasswordGenerator";
 import EditPopup from "../components/EditCard";
