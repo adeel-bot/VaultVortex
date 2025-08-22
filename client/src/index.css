@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+.overpass-font {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.pixelify-sans-font {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+h1 {
+  transition: background-color 0.5s ease, color 0.5s ease,
+    border-color 0.5s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: #e6e6e6;
+  background-image: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    rgba(120, 119, 198, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  color: black;
+}
+
+.input-container input::placeholder {
+  color: rgba(0, 0, 0, 0.737);
+  transition: color 0.5s ease;
+}
+
+.input-container input {
+  border-color: #371457;
+}
+
+
+.delete-icon {
+  border-radius: 50%; 
+
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; 
+}
+
+.delete-icon:hover {
+  background-color: rgba(229, 56, 53, 0.256); 
+}
+.isDark .delete-icon:hover {
+  background-color: rgba(187, 12, 9, 0.396); 
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+
+.isDark {
+  background-color: #0a0a0a;
+  background-image: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    rgba(120, 119, 198, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  color: white;
+
+  & .input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  & .input-container input {
+    border-color: #262135;
+    background-color: rgba(255, 255, 255, 0.04);
+    color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+
+  & .input-container input:focus {
+    outline: none;
+    border-color: #6a4e9c;
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 0 3px rgba(106, 78, 156, 0.25);
+  }
+
+
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.isDark input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  caret-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.isDark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.07) inset;
+  -webkit-text-fill-color: white !important;
+}
+
+.isDark input:autofill {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: white !important;
+  caret-color: white;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: black !important;
+}
+
+.lock-icon img {
+  transition: opacity 0.4s ease;
+}
+
+.icon-transition img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fade {
+  animation: fadeInOut 2s ease-in-out forwards;
+}
+.nav-section {
+  height: 4.3rem;
+}
+.nav-right {
+  column-gap: 20px;
+}
+
+.nav-right-inner {
+  gap: 20px;
+}
+@media (max-width: 400px) {
+  .nav-section {
+    height: 5.2rem;
+  }
+  .nav-right {
+    flex-direction: column-reverse;
+    gap: 7px;
+    padding-top: 20px;
+  }
+  .logout-btn {
+    margin-top: 6px;
+  }
+}
