@@ -20,7 +20,6 @@ const Navbar = ({ theme, saveTheme, showSocialCard, setshowSocialCard }) => {
     try {
       const res = await axios.post(
         `${API_URI}/logout`,
-        {},
         { withCredentials: true }
       );
 
@@ -46,7 +45,7 @@ const Navbar = ({ theme, saveTheme, showSocialCard, setshowSocialCard }) => {
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 40, scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                className={`absolute right-14 top-1/2 -translate-y-1/2 w-45 md:w-56 
+                className={`absolute right-12 md:right-14 top-1/2 -translate-y-1/2 w-45 md:w-56 
                   rounded-tl-xl rounded-tr-sm rounded-br-xl rounded-bl-xl 
                   shadow-xl border p-4 flex flex-col gap-3
                   ${
