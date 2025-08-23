@@ -1,6 +1,6 @@
 
       import jwt from 'jsonwebtoken';
-      const secret = "adeel1695@7(&%%48sv42h4#@..'"
+      const secret = process.env.JWT_SECRET || "fallback_secret"; 
     export function setUser( user) {   
             return jwt.sign({
                   _id: user._id,
