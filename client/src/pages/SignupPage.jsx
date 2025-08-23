@@ -4,7 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-    const API_URI = 'https://vault-vortex-server.vercel.app/user';
+    const API_URI = 'https://vault-vortex-server-iwu0c23me-adeel-ahmads-projects-b87a779d.vercel.app/user';
 
 export default function SignupPage({ theme }) {
 

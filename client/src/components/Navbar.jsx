@@ -11,7 +11,7 @@ import { github_icon } from "../index.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URI = 'https://vault-vortex-server.vercel.app/user';
+const API_URI = 'https://vault-vortex-server-iwu0c23me-adeel-ahmads-projects-b87a779d.vercel.app/user';
 
 const Navbar = ({ theme, saveTheme, showSocialCard, setshowSocialCard }) => {
   const navigate = useNavigate();
