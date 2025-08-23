@@ -24,7 +24,7 @@ Built with the MERN stack, it focuses on authentication, encryption, and seamles
 ---
 
 ## 🚀 Tech Stack
-## Frontend
+### Frontend
 - ⚛️ **React.js**
 - 🎨 **TailwindCSS**
 - 💫 **Framer Motion**
@@ -32,14 +32,14 @@ Built with the MERN stack, it focuses on authentication, encryption, and seamles
 - 🧭 **React Router**
 - 💾 **LocalStorage (to remember theme)**
 
-## Backend
+### Backend
 - 🟢 **Node.js**
 - 🚂 **Express.js**
 - 🍃 **MongoDB + Mongoose**
 - 🔐 **Crypto (password encryption)**
 - 🛡️ **JWT Authentication**
 
-## Deployment
+### Deployment
 - ▲ **Vercel [Frontend + Backend]**
 
 
@@ -120,6 +120,6 @@ It is **not intended for production use** as a real-world password manager. For 
 ## 📜 License
 This project is licensed under the MIT License.
 
-## 🙋‍♂️ Author
+## 👾 Author
 Made with ❤️ by [Adeel Ahmad](https://www.linkedin.com/in/adeel-bot)  
 Follow me on [Instagram](https://www.instagram.com/adeel_bot)
