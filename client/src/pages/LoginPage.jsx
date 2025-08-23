@@ -25,13 +25,12 @@ export default function LoginPage({ theme }) {
 const onSubmit = async (data) => {
   setLoading(true);
   try {
-    const result = await axios.post(`${API_URI}/signin`, data, { withCredentials: true });
-    console.log("✅ Login successful:", result.data);
+      await axios.post(`${API_URI}/signin`, data, { withCredentials: true });
     reset(); 
     navigate('/');
   } catch (err) {
     const message = err.response?.data?.error || err.message;
-    console.error("❌ Login error:", message);
+    console.error("Login error:", message);
 
     if (message.toLowerCase().includes("password")) {
       setError("password", { type: "server", message });

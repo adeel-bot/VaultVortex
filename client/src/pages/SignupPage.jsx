@@ -19,9 +19,9 @@ export default function SignupPage({ theme }) {
     }
 
     await axios.post(`${API_URI}/signup`,signupData)
-    .then(result=> {console.log(result.data)
+    .then(
         navigate('/login')
-    })
+    )
     .catch(err=>console.log(err));
     reset();
   };
