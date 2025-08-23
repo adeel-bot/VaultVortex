@@ -21,7 +21,9 @@ app.use(cors({
 }));
 
 
-    mongoose.connect(process.env.MONGO_URI)
+    mongoose.connect(process.env.MONGO_URI,{
+        connectTimeoutMS: 60000
+    })
     .then(()=>console.log('MongoDB successfully connected via Mongoose'))
     .catch(err=>console.error(err));
 
