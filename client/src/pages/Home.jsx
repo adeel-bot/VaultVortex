@@ -29,7 +29,7 @@ import { Slide } from "react-toastify/unstyled";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URI = 'https://vault-vortex-server-iwu0c23me-adeel-ahmads-projects-b87a779d.vercel.app/api/vortex';
+const API_URI = 'https://vault-vortex-server.vercel.app/api/vortex';
 
 const Card = memo(
   ({
