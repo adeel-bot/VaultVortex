@@ -54,7 +54,7 @@ export async function handleUserSignin(req, res) {
     res.cookie("uid", token, {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production", // only secure in prod
-  sameSite: "lax",
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
 });
 
 
