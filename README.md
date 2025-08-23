@@ -91,6 +91,7 @@ To run this project locally:
 git clone https://github.com/adeel-bot/VaultVortex.git
 
 cd VaultVortex
+# make changes to the links to backend + frontend + database
 
 # Run backend
 cd server
