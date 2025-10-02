@@ -4,7 +4,11 @@ import { setUser } from "../service/auth.js";
 
 export async function handleUserLogout(req, res) {
   try {
-        res.clearCookie("uid", { httpOnly: true, sameSite: "strict" });
+        res.clearCookie("uid", {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+});
       res.status(200).json({ message: "Logged out successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
