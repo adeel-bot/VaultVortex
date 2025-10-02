@@ -16,23 +16,25 @@ const API_URI = 'https://vault-vortex-server.vercel.app/user';
 const Navbar = ({ theme, saveTheme, showSocialCard, setshowSocialCard }) => {
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      const res = await axios.post(
-        `${API_URI}/logout`,
-        { withCredentials: true }
-      );
+const handleLogout = async () => {
+  try {
+    const res = await axios.post(
+      `${API_URI}/logout`,
+      {}, // empty body
+      { withCredentials: true } // must be in config
+    );
 
-      if (res.status === 200) {
-        navigate("/login");
-      }
-    } catch (err) {
-      if (err.response?.status === 401) {
-        navigate("/login");
-      }
-      console.error("Error during logout:", err);
+    if (res.status === 200) {
+      navigate("/login");
     }
-  };
+  } catch (err) {
+    if (err.response?.status === 401) {
+      navigate("/login");
+    }
+    console.error("Error during logout:", err);
+  }
+};
+
 
   return (
     <header className=" mx-auto sticky top-0 z-50 lg:max-w-7xl sm:max-w-4xl px-4 md:px-15 backdrop-blur-md bg-transparent/20 shadow-xs ">
